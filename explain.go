@@ -14,7 +14,7 @@ import (
  * Takes in the runtime caller information and displays it in the format below:
  * [Jan-02-06 3:04pm] Error Warning: example.go main() line:9 Error invalid argument
  */
-func explain(err error) {
+func Explain(err error) {
 	if err != nil {
 		pc, file, line, _ := runtime.Caller(1)
 		function := strings.TrimPrefix(filepath.Ext(runtime.FuncForPC(pc).Name()), ".")
